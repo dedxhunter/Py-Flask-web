@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-    <img src="https://www.cansofbeans.com/wp-content/uploads/2015/11/Hola.png" height = 600 width = 400>
+    <img src="https://www.cansofbeans.com/wp-content/uploads/2015/11/Hola.png">
     <br>
     <form action="greet" method="post">
         {% for message in get_flashed_messages() %}
              <p>{{ message }}</p>
          {% endfor %}
         <br>
-        <input type="text" name="name_input" placeholder="Enter your name">
+        <input type="text" name="name_input">
         <br>
         <input type="send" value="GREET" id="greet">
     </form>
